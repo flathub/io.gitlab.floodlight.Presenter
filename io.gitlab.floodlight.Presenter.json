@@ -28,8 +28,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/floodlight/presenter.git",
-                    "tag": "0.10.1",
-                    "commit": "fee21a13812461a18c4a6db8839ce2a8a278429e"
+                    "tag": "0.10.2",
+                    "commit": "a76796891ba79897f4f497688c596f063cfbb610"
                 }
             ]
         }

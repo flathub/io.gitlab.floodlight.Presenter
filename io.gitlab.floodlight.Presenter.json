@@ -30,6 +30,10 @@
                     "url": "https://gitlab.com/floodlight/presenter.git",
                     "tag": "0.10.2",
                     "commit": "a76796891ba79897f4f497688c596f063cfbb610"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix-regex.patch"
                 }
             ]
         }

@@ -15,7 +15,6 @@
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
-        "/lib/debug",
         "/share/gtk-doc",
         "*.la",
         "*.a"

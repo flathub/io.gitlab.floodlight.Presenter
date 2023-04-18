@@ -1,12 +1,13 @@
 {
     "app-id": "io.gitlab.floodlight.Presenter",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "41",
+    "runtime-version": "44",
     "sdk": "org.gnome.Sdk",
     "command": "floodlight-presenter",
     "finish-args" : [
         "--share=ipc",
-        "--socket=x11",
+        "--socket=fallback-x11",
+        "--socket=wayland",
         "--socket=pulseaudio",
         "--device=dri",
         "--share=network",
@@ -15,12 +16,12 @@
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
-        "/lib/debug",
         "/share/gtk-doc",
         "*.la",
         "*.a"
     ],
     "modules": [
+        "shared-modules/libsoup/libsoup-2.4.json",
         {
             "name": "presenter",
             "buildsystem": "meson",
@@ -30,6 +31,10 @@
                     "url": "https://gitlab.com/floodlight/presenter.git",
                     "tag": "0.10.2",
                     "commit": "a76796891ba79897f4f497688c596f063cfbb610"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix-regex.patch"
                 }
             ]
         }

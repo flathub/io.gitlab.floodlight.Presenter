@@ -1,0 +1,26 @@
+From 5471a2462810eeea04aa902f70aa2cc6e1913926 Mon Sep 17 00:00:00 2001
+From: bbhtt <bbhtt.zn0i8@slmail.me>
+Date: Sat, 8 Apr 2023 09:00:11 +0530
+Subject: [PATCH] Fix regex causing build faliure with valac 0.56.3
+
+We need to escape the `-` character
+---
+ src/photon/updates.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/photon/updates.vala b/src/photon/updates.vala
+index 842be31..38291c1 100644
+--- a/src/photon/updates.vala
++++ b/src/photon/updates.vala
+@@ -115,7 +115,7 @@ namespace Photon {
+                     i += 2;
+                 } else if (fields_section) {
+                     MatchInfo match;
+-                    (/([\w\d- ]+):\s+(.+)/).match(line, 0, out match);
++                    (/([\w\d\- ]+):\s+(.+)/).match(line, 0, out match);
+                     if (!match.matches()) {
+                         // fields section is over
+                         fields_section = false;
+-- 
+2.40.0
+

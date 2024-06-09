@@ -35,6 +35,10 @@
                 {
                     "type": "patch",
                     "path": "fix-regex.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix_appdata.patch"
                 }
             ]
         }

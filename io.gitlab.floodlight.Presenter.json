@@ -1,7 +1,7 @@
 {
     "id": "io.gitlab.floodlight.Presenter",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "47",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "command": "floodlight-presenter",
     "finish-args" : [
@@ -31,7 +31,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/floodlight/presenter.git",
-                    "commit": "915c7e647ab1be5e8e4512e4bd71ab55efdc9554"
+                    "commit": "a462c4ad08f1a3fa2d45a24004cce8da87121b52"
                 }
             ]
         }

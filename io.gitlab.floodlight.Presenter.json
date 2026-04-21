@@ -1,7 +1,7 @@
 {
     "id": "io.gitlab.floodlight.Presenter",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "48",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "floodlight-presenter",
     "finish-args" : [
@@ -12,16 +12,6 @@
         "--device=dri",
         "--share=network",
         "--filesystem=host:ro"
-    ],
-    "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/lib/girepository-1.0",
-        "/share/gir-1.0",
-        "/share/gtk-doc",
-        "/share/vala",
-        "*.la",
-        "*.a"
     ],
     "modules": [
         {
